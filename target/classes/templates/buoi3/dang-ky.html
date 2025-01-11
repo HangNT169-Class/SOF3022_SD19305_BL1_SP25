@@ -19,7 +19,7 @@
     Mat Khau: <input type="text" th:field="${request1.passWord}">
     <span th:errors="*{passWord}"></span>
     <br/>
-    Gioi Tinh: <input type="radio" name="gender" value="true" th:checked="true" th:field="${request1.gender}"/>Nam
+    Gioi Tinh: <input type="radio" name="gender" value="true" th:checked="${request1.gender == true}"  th:field="${request1.gender}"/>Nam
     <input type="radio" name="gender" value="false" th:field="${request1.gender}"/>Nu
     <br/>
     <button type="submit">Dang Ky</button>

@@ -14,7 +14,9 @@ public class DangKyController {
     @GetMapping("dang-ky")
     public String hienThiFormDangKy(Model model) {
         // Tao ra 1 doi tuong de view hung de validate cac truong tren doi tuong day
-        model.addAttribute("request1", new DangKyRequest());
+        DangKyRequest request = new DangKyRequest();
+        request.setGender(true);
+        model.addAttribute("request1", request);
         return "buoi3/dang-ky";
     }
 
