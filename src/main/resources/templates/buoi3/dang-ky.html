@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/ket-qua1" method="post" th:object="${request1}">
+    <!--  Ho Va Ten: <input type="text" name="fullName"/> <br/>-->
+    <!--  Mat Khau: <input type="text" name="passWord"> <br/>-->
+    <!--  Gioi Tinh: <input type="radio" name="gender" value="true" />Nam-->
+    <!--  <input type="radio" name="gender" value="false" checked/>Nu-->
+    <!--  <br/>-->
+    <!--  <button type="submit">Dang Ky</button>-->
+    <!--    Ho Va Ten: <input type="text" th:field="${request1.fullName}"/> <br/>-->
+    Ho Va Ten: <input type="text" th:field="*{fullName}"/>
+    <span th:errors="*{fullName}"></span>
+    <br/>
+    Mat Khau: <input type="text" th:field="${request1.passWord}">
+    <span th:errors="*{passWord}"></span>
+    <br/>
+    Gioi Tinh: <input type="radio" name="gender" value="true" th:checked="true" th:field="${request1.gender}"/>Nam
+    <input type="radio" name="gender" value="false" th:field="${request1.gender}"/>Nu
+    <br/>
+    <button type="submit">Dang Ky</button>
+</form>
+</body>
+</html>
