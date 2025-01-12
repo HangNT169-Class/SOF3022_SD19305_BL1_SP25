@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+<h1>Header</h1>
+<form>
+    <label for="search">Tên:</label>
+    <input type="text" id="search" name="search">
+    <button type="submit">Search</button>
+</form>
+<!--Load ten len cbb-->
+<!--C1: Clear -->
+<!--<select>-->
+<!--    <option th:each="s: ${sinhViens}">-->
+<!--        <span th:text="${s.mssv}"></span>-->
+<!--    </option>-->
+<!--</select>-->
+<!--C2: Viet ngan gon-->
+<select>
+    <option th:each="s: ${sinhViens}"
+            th:value="${s.mssv}"
+            th:text="${s.ten}">
+    </option>
+</select>
+<button>Add Student</button>
+<table border="1">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>MSSV</th>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Địa chỉ</th>
+        <th>Giới tính</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--
+        for(Doi tuong: mang)
+        student: la 1 Object
+        i: De lay index cua mang
+    -->
+    <tr th:each="student,i : ${sinhViens}">
+        <td th:text="${i.count}"></td>
+        <td th:text="${student.mssv}"></td>
+        <td th:text="${student.ten}"></td>
+        <td th:text="${student.tuoi}"></td>
+        <td th:text="${student.diaChi}"></td>
+        <td th:text="${student.gioiTinh}"></td>
+        <td>
+            <a th:href="@{/sinh-vien/detail/{a}(a=${student.mssv})}">Detail</a>
+            <a th:href="@{/sinh-vien/delete/{id}(id=${student.mssv})}">Delete</a>
+            <a th:href="@{/sinh-vien/view-update/{id}(id=${student.mssv})}">Update</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h1>Footer</h1>
+</body>
+</html>

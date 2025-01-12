@@ -22,6 +22,8 @@ public class DangKyRequest {
 //    @Size
     private String passWord;
 
+//    private String tuoi;
+
     private Boolean gender;
 
 
