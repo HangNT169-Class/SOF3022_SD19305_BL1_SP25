@@ -31,5 +31,4 @@ public interface CategoryRepository extends JpaRepository<Category1, Long> {
     @Query(value = "SELECT * FROM category WHERE id = ?2 AND category_name = ?1",nativeQuery = true)
     List<Category1> search1(String name, Long id);
 
-
 }

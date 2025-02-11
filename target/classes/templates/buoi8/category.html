@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+<h1>Header</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student,i : ${lists}">
+        <td th:text="${i.count}"></td>
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.categoryName}"></td>
+        <td th:text="${student.categoryCode}"></td>
+    </tr>
+    </tbody>
+</table>
+<h1>Footer</h1>
+</body>
+</html>

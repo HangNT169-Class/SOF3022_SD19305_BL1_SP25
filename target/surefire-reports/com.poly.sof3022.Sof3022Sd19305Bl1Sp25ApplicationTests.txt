@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.poly.sof3022.Sof3022Sd19305Bl1Sp25ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.260 s -- in com.poly.sof3022.Sof3022Sd19305Bl1Sp25ApplicationTests
